@@ -9,12 +9,12 @@ document.addEventListener('DOMContentLoaded', function () {
     {
       title: "Python for Beginners",
       desc: "Kickstart your coding journey with hands-on Python sessions. No prior experience needed!",
-      img: "/static/workshop_app/img/python.png"
+      img: "/static/workshop_app/img/python_courses.png"
     },
     {
       title: "Data Science Bootcamp",
       desc: "Explore data analysis, visualization, and machine learning techniques with real-world projects.",
-      img: "/static/workshop_app/img/data.png"
+      img: "/static/workshop_app/img/datasci.png"
     },
     {
       title: "Web Development Essentials",
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
     {
       title: "UI/UX Design Sprint",
       desc: "Master the art of user interface and experience design with creative, practical exercises.",
-      img: "/static/workshop_app/img/design.png"
+      img: "/static/workshop_app/img/ui.png"
     }
   ];
 
