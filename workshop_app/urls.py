@@ -52,4 +52,5 @@ urlpatterns = [
         name='view_own_profile'),
     url(r'^view_profile/(?P<user_id>\d+)$', views.view_profile,
         name='view_profile'),
+    path('book/', views.book_workshop, name='book_workshop'),
 ]

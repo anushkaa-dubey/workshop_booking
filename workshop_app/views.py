@@ -3,6 +3,7 @@ from django.db.models import Q
 from django.forms import inlineformset_factory, model_to_dict
 from django.http import JsonResponse, Http404
 from django.urls import reverse
+from django.views.decorators.csrf import csrf_exempt
 
 try:
     from StringIO import StringIO as string_io
@@ -10,6 +11,7 @@ except ImportError:
     from io import BytesIO as string_io
 from datetime import datetime
 import os
+import json
 
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.decorators import login_required
@@ -495,3 +497,18 @@ def view_own_profile(request):
 
     return render(request, "workshop_app/view_profile.html",
                   {"profile": profile, "Workshops": None, "form": form})
+
+
+@csrf_exempt
+def book_workshop(request):
+    if request.method == "POST":
+        data = json.loads(request.body)
+        name = data.get("name")
+        email = data.get("email")
+        phone = data.get("phone")
+        college = data.get("college")
+        workshop_id = data.get("workshopId")
+        # TODO: Save booking to DB, send email, etc.
+        # For now, just return success
+        return JsonResponse({"success": True, "message": "Booking received!"})
+    return JsonResponse({"success": False, "message": "Invalid request"}, status=400)
