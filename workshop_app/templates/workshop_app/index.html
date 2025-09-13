@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Workshop Booking</title>
   <link rel="stylesheet" href="{% static 'workshop_app/css/styles.css' %}">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -18,14 +18,16 @@
 
   <section class="hero">
     <div class="hero-inner">
-      <h1 class="hero-title">Discover & Book Workshops</h1>
-      <p class="muted">Learn new skills, meet great people, grow your career. Choose from our top-rated courses below!</p>
+      <h1 class="hero-title" style="font-family: 'Pacifico', cursive; font-style: italic; font-weight: bold; color: #222; letter-spacing: 2px;">
+        <span style="font-size:2.8rem;">Level Up Your Skills!</span>
+      </h1>
+      <p class="muted" style="margin-top:1rem;">Find, book, and join top workshops in coding, data, design, and more.</p>
     </div>
   </section>
 
   <main>
     <div id="cards" class="cards" role="list">
-      <!-- Cards will be rendered by app.js -->
+      <!--app.js -->
     </div>
   </main>
 
@@ -68,11 +70,10 @@
     </div>
   </div>
 
-  <!-- Toast -->
   <div id="toast" class="toast"></div>
 
   <footer class="site-footer">
-    <small>Made by anushka25dubey@gmail.com</small>
+    <small>Mail to: <a href="mailto:anushka25dubey@gmail.com" style="color:inherit;text-decoration:underline;">anushka25dubey@gmail.com</a></small>
   </footer>
 
   <script src="{% static 'workshop_app/js/app.js' %}" defer></script>

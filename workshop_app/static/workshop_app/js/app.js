@@ -3,40 +3,38 @@ const modalTitle = document.getElementById('modalTitle');
 const bookingForm = document.getElementById('bookingForm');
 const toast = document.getElementById('toast');
 
-// This JS ensures all cards are rendered and modal/form logic works
 
 document.addEventListener('DOMContentLoaded', function () {
-  // Card data
-  const workshops = [
+ const workshops = [
     {
       title: "Python for Beginners",
       desc: "Kickstart your coding journey with hands-on Python sessions. No prior experience needed!",
-      img: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80"
+      img: "/static/workshop_app/img/python.png"
     },
     {
       title: "Data Science Bootcamp",
       desc: "Explore data analysis, visualization, and machine learning techniques with real-world projects.",
-      img: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80"
+      img: "/static/workshop_app/img/data.png"
     },
     {
       title: "Web Development Essentials",
       desc: "Build modern, responsive websites from scratch using HTML, CSS, and JavaScript.",
-      img: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80"
+      img: "/static/workshop_app/img/web.png"
     },
     {
       title: "AI & Machine Learning",
       desc: "Dive into artificial intelligence and machine learning with hands-on labs and expert mentors.",
-      img: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80"
+      img: "/static/workshop_app/img/ai.png"
     },
     {
       title: "Cloud Computing Fundamentals",
       desc: "Learn the basics of cloud platforms, deployment, and scaling applications in the cloud.",
-      img: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80"
+      img: "/static/workshop_app/img/cloud.png"
     },
     {
       title: "UI/UX Design Sprint",
       desc: "Master the art of user interface and experience design with creative, practical exercises.",
-      img: "https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=400&q=80"
+      img: "/static/workshop_app/img/design.png"
     }
   ];
 
@@ -47,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const card = document.createElement('div');
     card.className = 'card';
     card.innerHTML = `
-      <img src="${w.img}" alt="${w.title}">
+      <img src="${w.img}" alt="${w.title}" class="card-symbol">
       <div class="card-content">
         <h3>${w.title}</h3>
         <p>${w.desc}</p>
@@ -75,33 +73,29 @@ document.addEventListener('DOMContentLoaded', function () {
     e.preventDefault();
     let valid = true;
     let form = e.target;
-    // Validate required fields
     ['name', 'email', 'phone', 'courseLevel'].forEach(function(id) {
       let input = form[id];
       if (!input.value.trim()) {
-        input.style.borderColor = '#ef4444';
+        input.style.borderColor = '#ffb86b';
         valid = false;
       } else {
         input.style.borderColor = '';
       }
     });
-    // Email pattern
     let email = form.email.value.trim();
     if (email && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
-      form.email.style.borderColor = '#ef4444';
+      form.email.style.borderColor = '#ffb86b';
       valid = false;
     }
-    // Phone pattern
     let phone = form.phone.value.trim();
     if (phone && !/^[0-9]{7,15}$/.test(phone)) {
-      form.phone.style.borderColor = '#ef4444';
+      form.phone.style.borderColor = '#ffb86b';
       valid = false;
     }
     if (!valid) {
       showToast('Please fill all required fields correctly.');
       return false;
     }
-    // Submit via fetch
     fetch('/workshop/book/', {
       method: 'POST',
       headers: {
@@ -136,7 +130,6 @@ document.addEventListener('DOMContentLoaded', function () {
     setTimeout(() => toast.classList.remove('show'), 3000);
   }
 
-  // Helper to get CSRF token
   function getCookie(name) {
     let cookieValue = null;
     if (document.cookie && document.cookie !== '') {
