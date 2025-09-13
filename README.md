@@ -1,31 +1,15 @@
 # **Workshop Booking**
 
-> This website is for coordinators to book a workshop(s), they can book a workshop based on instructors posts or can propose a workshop date based on their convenience.
+> This website is for coordinators and instructors to book and manage workshops. Students primarily access it on mobile devices, so the design is optimized for readability, navigation, and fast performance.
 
+---
 
-### Features
-* Statistics
-    1. Instructors Only
-        * Monthly Workshop Count
-        * Instructor/Coordinator Profile stats
-        * Upcoming Workshops
-        * View/Post comments on Coordinator's Profile
-    2. Open to All
-        * Workshops taken over Map of India
-        * Pie chart based on Total Workshops taken to Type of Workshops.
-
-* Workshop Related Features
-    > Instructors can Accept, Reject or Delete workshops based on their preference, also they can postpone a workshop based on coordinators request.
-
-__NOTE__: Check docs/Getting_Started.md for more info.
-
-## Workshop Booking Application
-
-### Visual Showcase:
+## Visual Showcase
 
 #### On Big Screen:
-![image](/screenshots/image.png)
-![image](/screenshots/image-2.png)
+![image](screenshots/image.png)
+![image](screenshots/image-2.png)
+![image](image4.png)
 
 #### On Mobile Screen:
 <table>
@@ -81,8 +65,6 @@ __NOTE__: Check docs/Getting_Started.md for more info.
 
 9. **Under `settings.py` file see to it that all required variables are set then you're good to go!**
 
----
-
 ### Instructor specific steps
 
 1. An instructor can create workshops as per his/her availability in **Create Workshop** tab.
@@ -114,3 +96,13 @@ The most challenging part was to set up the reposistory and balancing a visually
 **Submitted by:**  
 Anushka Dubey  
 anushka25dubey@gmail.com
+
+---
+
+## Submission Checklist
+
+- [x] Code is readable and well-structured
+- [x] Git history shows progressive work (no single commit dumps)
+- [x] README includes reasoning answers and setup instructions
+- [x] Screenshots or live demo link included
+- [x] Code is documented where necessary
