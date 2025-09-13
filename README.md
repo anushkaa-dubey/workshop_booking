@@ -65,6 +65,7 @@
 
 9. **Under `settings.py` file see to it that all required variables are set then you're good to go!**
 
+10. **To see the frontend open the localhost/workshop/**
 ### Instructor specific steps
 
 1. An instructor can create workshops as per his/her availability in **Create Workshop** tab.
