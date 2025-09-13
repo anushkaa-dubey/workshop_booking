@@ -30,8 +30,8 @@ __NOTE__: Check docs/Getting_Started.md for more info.
 #### On Mobile Screen:
 <table>
   <tr>
-    <td align="center"><img src="docs/mobile1.png" width="250"><br>Mobile Screenshot 1</td>
-    <td align="center"><img src="docs/mobile2.png" width="250"><br>Mobile Screenshot 2</td>
+    <td align="center"><img src="screenshots/image-1.png1.png" width="250"><br>Mobile Screenshot 1</td>
+    <td align="center"><img src="screenshots/image-3.png.png" width="250"><br>Mobile Screenshot 2</td>
   </tr>
 </table>
 
