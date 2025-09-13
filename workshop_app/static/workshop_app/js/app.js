@@ -9,36 +9,35 @@ document.addEventListener('DOMContentLoaded', function () {
     {
       title: "Python for Beginners",
       desc: "Kickstart your coding journey with hands-on Python sessions. No prior experience needed!",
-      img: "/static/workshop_app/img/python_courses.png"
+      img: "/static/workshop_app/img/workshop_images/python_courses.png"
     },
     {
       title: "Data Science Bootcamp",
       desc: "Explore data analysis, visualization, and machine learning techniques with real-world projects.",
-      img: "/static/workshop_app/img/datasci.png"
+      img: "/static/workshop_app/img/workshop_images/datasci.png"
     },
     {
       title: "Web Development Essentials",
       desc: "Build modern, responsive websites from scratch using HTML, CSS, and JavaScript.",
-      img: "/static/workshop_app/img/web.png"
+      img: "/static/workshop_app/img/workshop_images/web.png"
     },
     {
       title: "AI & Machine Learning",
       desc: "Dive into artificial intelligence and machine learning with hands-on labs and expert mentors.",
-      img: "/static/workshop_app/img/ai.png"
+      img: "/static/workshop_app/img/workshop_images/ai.png"
     },
     {
       title: "Cloud Computing Fundamentals",
       desc: "Learn the basics of cloud platforms, deployment, and scaling applications in the cloud.",
-      img: "/static/workshop_app/img/cloud.png"
+      img: "/static/workshop_app/img/workshop_images/cloud.png"
     },
     {
       title: "UI/UX Design Sprint",
       desc: "Master the art of user interface and experience design with creative, practical exercises.",
-      img: "/static/workshop_app/img/ui.png"
+      img: "/static/workshop_app/img/workshop_images/ui.png"
     }
   ];
 
-  // Render cards dynamically
   const cardsContainer = document.getElementById('cards');
   cardsContainer.innerHTML = '';
   workshops.forEach(w => {
