@@ -9,7 +9,7 @@
 #### On Big Screen:
 ![image](screenshots/image.png)
 ![image](screenshots/image-2.png)
-![image](image4.png)
+![image](screenshots/image4.png)
 
 #### On Mobile Screen:
 <table>
