@@ -57,13 +57,8 @@ def get_landing_page(user):
 # View functions
 
 def index(request):
-    """Landing Page : Redirect to login page if not logged in
-                      Redirect to respective landing page according to position"""
-    user = request.user
-    if user.is_authenticated and is_email_checked(user):
-        return redirect(get_landing_page(user))
-
-    return redirect(reverse('workshop_app:login'))
+    return render(request,
+                  'workshop_app/index.html')
 
 
 # User views
